@@ -105,10 +105,10 @@ header {
   color: #fc6f4f;
 }
 .main-form-btn {
-  background-color: #fc6f4f;
+  background-color: #92908e;
   border: none;
   padding: 15px 35px;
-  color: #ffffff;
+  color: #706b73;
   display: block;
   margin: 0 auto;
   margin-top: 20px;
@@ -121,6 +121,8 @@ header {
 }
 .main-form-btn:hover {
   box-shadow: 0px 11px 20px 0px rgba(20, 20, 21, 0.08);
+  background-color: #fc6f4f;
+  color: #ffffff;
 }
 .main-form input,
 .main-form textarea {
@@ -148,9 +150,15 @@ header {
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
   border-radius: 5px;
+  -webkit-transition: transform;
+  -o-transition: transform;
+  transition: transform;
 }
 .line:before,
 .line:after {
+  -webkit-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
   background-color: #706b73;
   display: inline-block;
   content: "";
@@ -179,6 +187,30 @@ header {
   -o-transform: translateY(4px);
   transform: translateY(4px);
 }
+/* .main-nav-bar:hover {
+  .line {
+    height: 0;
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
+    &:before {
+      -webkit-transform: rotate(-45deg);
+      -moz-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+      -o-transform: rotate(-45deg);
+      transform: rotate(-45deg);  
+    }
+    &:after {
+      --webkit-transform: rotate(45deg);
+      -moz-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      -o-transform: rotate(45deg);
+      transform: rotate(45deg);
+      
+    }
+  }
+} */
 /* Process section */
 .process-box {
   color: #ffffff;
@@ -519,4 +551,42 @@ footer {
     margin-top: 30px;
     margin-left: 270px;
   }
+}
+.overlay-nav {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.overlay-nav ul {
+  padding-top: 15%;
+  line-height: 2.5;
+  list-style: none;
+  text-align: center;
+}
+.overlay-nav ul li * {
+  -webkit-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+  color: #ffffff;
+  font-size: 36px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+}
+.overlay-nav ul li *:hover {
+  text-decoration: none;
+  color: #fc6f4f;
+}
+.close-nav {
+  position: fixed;
+  font-size: 50px;
+  top: 5%;
+  right: 5%;
+  color: #ffffff;
+}
+.close-nav:hover {
+  cursor: pointer;
 }
